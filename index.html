@@ -136,9 +136,15 @@
       .about-section h2 {
         font-size: 2.8rem;
         font-weight: 600;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
         color: #1a202c;
         text-align: center;
+      }
+      .about-section .about-content {
+        background: linear-gradient(135deg, #f9fafb, #e2e8f0);
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
       }
       .about-section img {
         border-radius: 20px;
@@ -151,6 +157,18 @@
         font-size: 1.1rem;
         color: #4a5568;
         margin-bottom: 20px;
+      }
+      .about-section .btn-primary {
+        font-size: 1.1rem;
+        padding: 12px 30px;
+        border-radius: 50px;
+        background-color: #ff6f61;
+        border: none;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+      .about-section .btn-primary:hover {
+        background-color: #e55a4e;
+        transform: scale(1.05);
       }
       /* Testimonials Section */
       .testimonials-section {
@@ -286,6 +304,9 @@
         .contact-section img {
           max-height: 300px;
         }
+        .about-section .about-content {
+          padding: 25px;
+        }
       }
       @media (max-width: 576px) {
         .hero-section h1 {
@@ -359,7 +380,7 @@
         <h1>Sparkle with BroomZone</h1>
         <p>
           Transform your space with our eco-friendly, professional cleaning
-          services. Book now for a spotless home or office!
+          services. Book now for a spotless home, office, or facility!
         </p>
         <a href="#contact" class="btn btn-primary">Book Now</a>
       </div>
@@ -418,6 +439,55 @@
               </div>
             </div>
           </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card service-card">
+              <img
+                src="./assets/images/hotalcleaning.jpeg"
+                class="card-img-top"
+                alt="Hotel Cleaning"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Hotel Cleaning</h5>
+                <p class="card-text">
+                  Ensure a welcoming environment for guests with our specialized
+                  hotel cleaning services, covering rooms and common areas.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card service-card">
+              <img
+                src="./assets/images/hospitalImage.jpeg"
+                class="card-img-top"
+                alt="Hospital Cleaning"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Hospital Cleaning</h5>
+                <p class="card-text">
+                  Maintain a sterile and safe environment with our
+                  hospital-grade cleaning for medical facilities.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card service-card">
+              <img
+                src="./assets/images/carpetCleaning.jpeg"
+                class="card-img-top"
+                alt="Carpet Cleaning"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Carpet Cleaning</h5>
+                <p class="card-text">
+                  Restore your carpets to their original beauty with our
+                  professional carpet cleaning, removing stains and odors
+                  effectively.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -425,7 +495,7 @@
     <!-- About Section -->
     <section id="about" class="about-section">
       <div class="container">
-        <h2>About BroomZone</h2>
+        <h2>Why Choose BroomZone?</h2>
         <div class="row g-4 align-items-center">
           <div class="col-lg-6 order-lg-2">
             <img
@@ -435,17 +505,24 @@
             />
           </div>
           <div class="col-lg-6 order-lg-1">
-            <p>
-              BroomZone is your trusted partner for exceptional cleaning
-              services. Our dedicated team uses eco-friendly products and
-              advanced techniques to ensure your home or office is spotless and
-              inviting.
-            </p>
-            <p>
-              With a commitment to quality and customer satisfaction, we tailor
-              our services to meet your unique needs, delivering a cleaner,
-              healthier environment every time.
-            </p>
+            <div class="about-content">
+              <h3>Our Mission</h3>
+              <p>
+                At BroomZone, we’re passionate about creating clean, healthy,
+                and inviting spaces. Founded with a vision to redefine cleaning
+                standards, we combine eco-friendly products with cutting-edge
+                techniques to deliver exceptional results for homes, offices,
+                hotels, and hospitals.
+              </p>
+              <h3>Our Commitment</h3>
+              <p>
+                Our team of trained professionals is dedicated to exceeding your
+                expectations. We prioritize sustainability, safety, and customer
+                satisfaction, ensuring every space we touch sparkles with
+                cleanliness and care.
+              </p>
+              <a href="#contact" class="btn btn-primary">Get in Touch</a>
+            </div>
           </div>
         </div>
       </div>
