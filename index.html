@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BroomZone - Professional Cleaning Services</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #ffffff;
+        color: #1a202c;
+        margin: 0;
+        line-height: 1.6;
+      }
+      .navbar {
+        background-color: #ffffff;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        padding: 15px 0;
+      }
+      .navbar-brand {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #1e90ff !important;
+        letter-spacing: 1px;
+      }
+      .nav-link {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #2d3748 !important;
+        margin: 0 20px;
+        transition: color 0.3s ease, transform 0.2s ease;
+      }
+      .nav-link:hover {
+        color: #1e90ff !important;
+        transform: scale(1.05);
+      }
+      /* Hero Section */
+      .hero-section {
+        background: linear-gradient(
+            rgba(30, 144, 255, 0.9),
+            rgba(30, 144, 255, 0.7)
+          ),
+          url("./assets/images/homeCleaning.jpeg");
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        padding: 120px 0;
+        text-align: center;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero-section h1 {
+        font-size: 3.8rem;
+        font-weight: 700;
+        margin-bottom: 25px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+      .hero-section p {
+        font-size: 1.3rem;
+        max-width: 650px;
+        margin: 0 auto 35px;
+        font-weight: 300;
+      }
+      .hero-section .btn-primary {
+        font-size: 1.2rem;
+        padding: 15px 50px;
+        border-radius: 50px;
+        background-color: #ff6f61;
+        border: none;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+      .hero-section .btn-primary:hover {
+        background-color: #e55a4e;
+        transform: scale(1.05);
+      }
+      /* Services Section */
+      .services-section {
+        padding: 100px 0;
+        background-color: #f9fafb;
+      }
+      .services-section h2 {
+        font-size: 2.8rem;
+        font-weight: 600;
+        margin-bottom: 60px;
+        color: #1a202c;
+        text-align: center;
+      }
+      .service-card {
+        border: none;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-color: #fff;
+      }
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+      .service-card img {
+        height: 250px;
+        object-fit: cover;
+        width: 100%;
+      }
+      .service-card .card-body {
+        padding: 30px;
+        text-align: center;
+      }
+      .service-card .card-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #1a202c;
+      }
+      .service-card .card-text {
+        font-size: 1rem;
+        color: #4a5568;
+      }
+      /* About Section */
+      .about-section {
+        padding: 100px 0;
+        background-color: #ffffff;
+      }
+      .about-section h2 {
+        font-size: 2.8rem;
+        font-weight: 600;
+        margin-bottom: 50px;
+        color: #1a202c;
+        text-align: center;
+      }
+      .about-section img {
+        border-radius: 20px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        max-height: 450px;
+        object-fit: cover;
+        width: 100%;
+      }
+      .about-section p {
+        font-size: 1.1rem;
+        color: #4a5568;
+        margin-bottom: 20px;
+      }
+      /* Testimonials Section */
+      .testimonials-section {
+        padding: 100px 0;
+        background: linear-gradient(
+          rgba(30, 144, 255, 0.1),
+          rgba(30, 144, 255, 0.1)
+        );
+        position: relative;
+      }
+      .testimonials-section h2 {
+        font-size: 2.8rem;
+        font-weight: 600;
+        margin-bottom: 50px;
+        color: #1a202c;
+        text-align: center;
+      }
+      .testimonial-card {
+        border: none;
+        border-radius: 20px;
+        background-color: #fff;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+        transition: transform 0.3s ease;
+      }
+      .testimonial-card:hover {
+        transform: translateY(-5px);
+      }
+      .testimonial-card .card-text {
+        font-size: 1.1rem;
+        color: #4a5568;
+        font-style: italic;
+      }
+      .testimonial-card .fw-bold {
+        color: #1e90ff;
+        font-size: 1rem;
+      }
+      /* Contact Section */
+      .contact-section {
+        padding: 100px 0;
+        background-color: #f9fafb;
+      }
+      .contact-section h2 {
+        font-size: 2.8rem;
+        font-weight: 600;
+        margin-bottom: 50px;
+        color: #1a202c;
+        text-align: center;
+      }
+      .contact-section .form-control {
+        border-radius: 10px;
+        border: 1px solid #e2e8f0;
+        padding: 15px;
+        font-size: 1rem;
+      }
+      .contact-section .btn-primary {
+        border-radius: 10px;
+        padding: 15px 40px;
+        font-weight: 500;
+        background-color: #ff6f61;
+        border: none;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+      .contact-section .btn-primary:hover {
+        background-color: #e55a4e;
+        transform: scale(1.05);
+      }
+      .contact-section img {
+        border-radius: 20px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        max-height: 350px;
+        object-fit: cover;
+        width: 100%;
+      }
+      .contact-section p {
+        font-size: 1.1rem;
+        color: #4a5568;
+      }
+      /* Footer */
+      footer {
+        background-color: #1a202c;
+        color: #fff;
+        padding: 50px 0;
+        text-align: center;
+      }
+      footer p {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 300;
+      }
+      /* Responsive Design */
+      @media (max-width: 992px) {
+        .hero-section h1 {
+          font-size: 3rem;
+        }
+        .hero-section p {
+          font-size: 1.2rem;
+        }
+        .services-section h2,
+        .about-section h2,
+        .testimonials-section h2,
+        .contact-section h2 {
+          font-size: 2.2rem;
+        }
+        .service-card img {
+          height: 200px;
+        }
+        .about-section img {
+          max-height: 350px;
+        }
+      }
+      @media (max-width: 768px) {
+        .hero-section {
+          padding: 80px 0;
+          min-height: 60vh;
+        }
+        .hero-section h1 {
+          font-size: 2.5rem;
+        }
+        .hero-section p {
+          font-size: 1.1rem;
+        }
+        .services-section,
+        .about-section,
+        .testimonials-section,
+        .contact-section {
+          padding: 60px 0;
+        }
+        .service-card img {
+          height: 180px;
+        }
+        .about-section img,
+        .contact-section img {
+          max-height: 300px;
+        }
+      }
+      @media (max-width: 576px) {
+        .hero-section h1 {
+          font-size: 2rem;
+        }
+        .hero-section p {
+          font-size: 1rem;
+        }
+        .hero-section .btn-primary {
+          padding: 12px 30px;
+          font-size: 1rem;
+        }
+        .navbar-brand {
+          font-size: 1.6rem;
+        }
+        .nav-link {
+          margin: 10px 0;
+          font-size: 1rem;
+        }
+        .services-section h2,
+        .about-section h2,
+        .testimonials-section h2,
+        .contact-section h2 {
+          font-size: 1.8rem;
+        }
+        .service-card img {
+          height: 150px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">BroomZone</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <h1>Sparkle with BroomZone</h1>
+        <p>
+          Transform your space with our eco-friendly, professional cleaning
+          services. Book now for a spotless home or office!
+        </p>
+        <a href="#contact" class="btn btn-primary">Book Now</a>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <h2>Our Premium Services</h2>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card service-card">
+              <img
+                src="./assets/images/homeCleaning.jpeg"
+                class="card-img-top"
+                alt="Home Cleaning"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Home Cleaning</h5>
+                <p class="card-text">
+                  Revitalize your home with our comprehensive cleaning,
+                  including dusting, vacuuming, and sanitizing all surfaces.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card service-card">
+              <img
+                src="./assets/images/office-cleaning.jpeg"
+                class="card-img-top"
+                alt="Office Cleaning"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Office Cleaning</h5>
+                <p class="card-text">
+                  Keep your workspace pristine and professional with our
+                  customized office cleaning solutions.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card service-card">
+              <img
+                src="./assets/images/deepCleaning.jpg"
+                class="card-img-top"
+                alt="Deep Cleaning"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Deep Cleaning</h5>
+                <p class="card-text">
+                  Tackle tough stains and grime with our thorough deep cleaning
+                  for kitchens, bathrooms, and more.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2>About BroomZone</h2>
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <img
+              src="./assets/images/AboutBroomZone.webp"
+              class="img-fluid"
+              alt="Cleaning Team"
+            />
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <p>
+              BroomZone is your trusted partner for exceptional cleaning
+              services. Our dedicated team uses eco-friendly products and
+              advanced techniques to ensure your home or office is spotless and
+              inviting.
+            </p>
+            <p>
+              With a commitment to quality and customer satisfaction, we tailor
+              our services to meet your unique needs, delivering a cleaner,
+              healthier environment every time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+      <div class="container">
+        <h2>Client Testimonials</h2>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card testimonial-card">
+              <div class="card-body">
+                <p class="card-text">
+                  "BroomZone transformed my home! Their eco-friendly approach
+                  and attention to detail are unmatched."
+                </p>
+                <p class="fw-bold text-end">- Sarah M.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card testimonial-card">
+              <div class="card-body">
+                <p class="card-text">
+                  "Our office has never looked better. BroomZone’s team is
+                  professional, reliable, and thorough."
+                </p>
+                <p class="fw-bold text-end">- John D.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card testimonial-card">
+              <div class="card-body">
+                <p class="card-text">
+                  "The deep cleaning service was a game-changer. My kitchen and
+                  bathroom sparkle!"
+                </p>
+                <p class="fw-bold text-end">- Emily R.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <h4>Contact Information</h4>
+            <p><strong>Email:</strong> contact@broomzone.com</p>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+            <p>
+              <strong>Address:</strong> 123 Clean Street, Suite 100, City,
+              Country
+            </p>
+            <img
+              src="./assets/images/contactInfo.jpg"
+              class="img-fluid mt-4"
+              alt="Contact Us"
+            />
+          </div>
+          <div class="col-lg-6">
+            <div id="contact-form">
+              <div class="mb-4">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Your Name"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Your Email"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="5"
+                  placeholder="Your Message"
+                ></textarea>
+              </div>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="alert('Message sent! We will get back to you soon.')"
+              >
+                Send Message
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>© 2025 BroomZone. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
