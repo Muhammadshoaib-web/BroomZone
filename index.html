@@ -28,11 +28,10 @@
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
         padding: 15px 0;
       }
-      .navbar-brand {
-        font-size: 2rem;
-        font-weight: 700;
-        color: #1e90ff !important;
-        letter-spacing: 1px;
+      .navbar-brand img {
+        width: 150px;
+        height: 50px;
+        object-fit: contain;
       }
       .nav-link {
         font-size: 1.1rem;
@@ -247,6 +246,14 @@
         font-size: 1.1rem;
         color: #4a5568;
       }
+      .contact-section a {
+        color: #1e90ff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .contact-section a:hover {
+        color: #ff6f61;
+      }
       /* Footer */
       footer {
         background-color: #1a202c;
@@ -319,8 +326,9 @@
           padding: 12px 30px;
           font-size: 1rem;
         }
-        .navbar-brand {
-          font-size: 1.6rem;
+        .navbar-brand img {
+          width: 120px;
+          height: 40px;
         }
         .nav-link {
           margin: 10px 0;
@@ -342,7 +350,9 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
       <div class="container">
-        <a class="navbar-brand" href="#">BroomZone</a>
+        <a class="navbar-brand" href="#"
+          ><img src="./assets/images/logo.jpeg" alt="BroomZone Logo"
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -379,8 +389,9 @@
       <div class="container">
         <h1>Sparkle with BroomZone</h1>
         <p>
-          Transform your space with our eco-friendly, professional cleaning
-          services. Book now for a spotless home, office, or facility!
+          Transform your space with our skilled cleaning professionals, using
+          eco-friendly methods and your equipment for a spotless home, office,
+          or facility!
         </p>
         <a href="#contact" class="btn btn-primary">Book Now</a>
       </div>
@@ -401,8 +412,8 @@
               <div class="card-body">
                 <h5 class="card-title">Home Cleaning</h5>
                 <p class="card-text">
-                  Revitalize your home with our comprehensive cleaning,
-                  including dusting, vacuuming, and sanitizing all surfaces.
+                  Revitalize your home with our expert cleaners, using your
+                  equipment to dust, vacuum, and sanitize all surfaces.
                 </p>
               </div>
             </div>
@@ -417,8 +428,8 @@
               <div class="card-body">
                 <h5 class="card-title">Office Cleaning</h5>
                 <p class="card-text">
-                  Keep your workspace pristine and professional with our
-                  customized office cleaning solutions.
+                  Keep your workspace pristine with our professional cleaners,
+                  utilizing your tools for customized solutions.
                 </p>
               </div>
             </div>
@@ -433,8 +444,9 @@
               <div class="card-body">
                 <h5 class="card-title">Deep Cleaning</h5>
                 <p class="card-text">
-                  Tackle tough stains and grime with our thorough deep cleaning
-                  for kitchens, bathrooms, and more.
+                  Our skilled team tackles tough stains and grime using your
+                  equipment for thorough cleaning of kitchens, bathrooms, and
+                  more.
                 </p>
               </div>
             </div>
@@ -449,8 +461,8 @@
               <div class="card-body">
                 <h5 class="card-title">Hotel Cleaning</h5>
                 <p class="card-text">
-                  Ensure a welcoming environment for guests with our specialized
-                  hotel cleaning services, covering rooms and common areas.
+                  Ensure a welcoming environment for guests with our expert
+                  cleaners, using your equipment for rooms and common areas.
                 </p>
               </div>
             </div>
@@ -465,8 +477,8 @@
               <div class="card-body">
                 <h5 class="card-title">Hospital Cleaning</h5>
                 <p class="card-text">
-                  Maintain a sterile and safe environment with our
-                  hospital-grade cleaning for medical facilities.
+                  Maintain a sterile environment with our trained professionals,
+                  using your hospital-grade tools for safe cleaning.
                 </p>
               </div>
             </div>
@@ -481,9 +493,8 @@
               <div class="card-body">
                 <h5 class="card-title">Carpet Cleaning</h5>
                 <p class="card-text">
-                  Restore your carpets to their original beauty with our
-                  professional carpet cleaning, removing stains and odors
-                  effectively.
+                  Restore your carpets with our skilled cleaners, using your
+                  equipment to remove stains and odors effectively.
                 </p>
               </div>
             </div>
@@ -508,18 +519,18 @@
             <div class="about-content">
               <h3>Our Mission</h3>
               <p>
-                At BroomZone, we’re passionate about creating clean, healthy,
-                and inviting spaces. Founded with a vision to redefine cleaning
-                standards, we combine eco-friendly products with cutting-edge
-                techniques to deliver exceptional results for homes, offices,
-                hotels, and hospitals.
+                At BroomZone, we’re dedicated to delivering spotless spaces
+                through our highly trained cleaning professionals. Based in
+                Faisal Town Block B, Lahore, we focus on eco-friendly methods,
+                using your equipment to achieve exceptional results for homes,
+                offices, hotels, and hospitals.
               </p>
               <h3>Our Commitment</h3>
               <p>
-                Our team of trained professionals is dedicated to exceeding your
-                expectations. We prioritize sustainability, safety, and customer
-                satisfaction, ensuring every space we touch sparkles with
-                cleanliness and care.
+                Our skilled team prioritizes your satisfaction, bringing
+                expertise and care to every job. We work with your tools to
+                ensure a sustainable, safe, and sparkling clean environment
+                tailored to your needs.
               </p>
               <a href="#contact" class="btn btn-primary">Get in Touch</a>
             </div>
@@ -538,7 +549,7 @@
               <div class="card-body">
                 <p class="card-text">
                   "BroomZone transformed my home! Their eco-friendly approach
-                  and attention to detail are unmatched."
+                  and skilled team are unmatched."
                 </p>
                 <p class="fw-bold text-end">- Sarah M.</p>
               </div>
@@ -548,8 +559,8 @@
             <div class="card testimonial-card">
               <div class="card-body">
                 <p class="card-text">
-                  "Our office has never looked better. BroomZone’s team is
-                  professional, reliable, and thorough."
+                  "Our office has never looked better. BroomZone’s professionals
+                  are reliable and thorough."
                 </p>
                 <p class="fw-bold text-end">- John D.</p>
               </div>
@@ -577,12 +588,17 @@
         <div class="row g-4">
           <div class="col-lg-6">
             <h4>Contact Information</h4>
-            <p><strong>Email:</strong> contact@broomzone.com</p>
-            <p><strong>Phone:</strong> (123) 456-7890</p>
             <p>
-              <strong>Address:</strong> 123 Clean Street, Suite 100, City,
-              Country
+              <strong>Email:</strong>
+              <a href="mailto:BroomZone@gmail.com">BroomZone@gmail.com</a>
             </p>
+            <p>
+              <strong>Phone:</strong>
+              <a href="https://wa.me/923095048130" target="_blank"
+                >03095048130</a
+              >
+            </p>
+            <p><strong>Address:</strong> Faisal Town Block B, Lahore</p>
             <img
               src="./assets/images/contactInfo.jpg"
               class="img-fluid mt-4"
